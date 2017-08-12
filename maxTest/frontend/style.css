@@ -1,0 +1,21 @@
+.header {
+    font-size: 50px;
+    text-align: center;
+}
+
+.svg {
+    height: 50px;
+}
+
+.button {
+    padding: 2px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: black;
+    color: white
+}
+
+.flex {
+    display: flex;
+    justify-content: center
+}

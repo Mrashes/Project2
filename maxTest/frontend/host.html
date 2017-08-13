@@ -5,7 +5,7 @@
     <title>title</title>
   </head>
   <body>
-    <p>This is your room Code</p>
+    <p id="roomcode">This is your room Code</p>
     <div>
         <p>Player 1</p>
         <p>Player 2</p>
@@ -13,5 +13,28 @@
     <div>
         <a href="#">Start game</a>
     </div>
+    <script>
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+      }
+
+      window.onload=start();
+
+      function start() {
+        var array = ["dog", "cat", "penguin", "antelope"];
+        var code = []
+        function codeGen(array) {
+          var code1 = getRandomInt(0, array.length)
+          var code2 = getRandomInt(0, array.length)
+          code.push(array[code1]);
+          code.push(array[code2]);
+          document.getElementById("roomcode").innerHTML = code.toString()
+        }
+        
+        codeGen(array)
+      }
+    </script>
   </body>
 </html>
